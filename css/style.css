@@ -1,0 +1,94 @@
+body {
+    background-color: #E9DDC9;
+}
+/* ESTANTERÍA */
+
+.estanteria {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    padding: 20px;
+    perspective: 800px;
+}
+/* CAJAS VHS */
+
+.vhs {
+    width: 100px;
+    height: 150px;
+    background-color: #5b3028;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.vhs {
+    border: 3px solid #2e1915;
+    border-radius: 3px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.vhs {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vhs:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.4);
+}
+/* PREPARAR LAS DOS CARAS DE LAS VHS */
+
+.vhs {
+    position: relative;
+    width: 35px;
+    height: 150px;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    transform-style: preserve-3d;
+}
+.vhs-canto,
+.vhs-portada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 3px solid #2e1915;
+    border-radius: 3px;
+    color: white;
+    backface-visibility: hidden;
+}
+
+.vhs-canto {
+    background-color: #5b3028;
+}
+
+.vhs-portada {
+    background-color: #a66b45;
+    transform: rotateY(180deg);
+}
+/* GIRO DE LAS VHS */
+
+.vhs {
+    transition: transform 0.6s ease;
+}
+
+.vhs:hover {
+    transform: translateY(-8px) rotateY(180deg);
+}
+/* DIFERENCIAR CANTO Y PORTADA */
+.vhs-canto {
+    width: 35px;
+    left: 0;
+}
+
+.vhs-portada {
+    width: 100px;
+    left: -32px;
+}
